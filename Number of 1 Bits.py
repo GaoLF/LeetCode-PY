@@ -1,7 +1,8 @@
+#coding=utf-8
 class Solution:
     # @param n, an integer
     # @return an integer
-    #python太可怕了，好像都不用考虑无符号数的问题！
+    #python澶彲鎬曚簡锛屽ソ鍍忛兘涓嶇敤鑰冭檻鏃犵鍙锋暟鐨勯棶棰橈紒
     def hammingWeight(self, n):
         foo = 1
         res = 0
