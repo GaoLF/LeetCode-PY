@@ -18,6 +18,6 @@ class Solution:
         return a[m * n - 1]
 
 A = Solution()
-print A.uniquePaths(3,2)
+print A.uniquePaths(3,3)
 print A.uniquePaths(3,7)
 print A.uniquePaths(3,4)
