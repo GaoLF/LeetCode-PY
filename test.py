@@ -56,3 +56,23 @@ if matchObj:
    print "matchObj.group(2) : ", matchObj.group(4)
 else:
    print "No match!!"
+
+
+
+A = []
+for i in A:
+    i.append(1)
+print A
+
+
+a = set()
+b = set()
+a.add(1)
+a.add(2)
+a.add(3)
+print a
+print a
+a = a- set([1])
+print a
+
+

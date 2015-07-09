@@ -4,6 +4,20 @@
 class Solution:
     # @param {integer[]} nums
     # @return {integer}
+
+    """
+    貌似我写的这个方法还是不够好，是参照一个别人写的
+    下边这种C++写的好像更好
+    int pre2 = 0, cur2 = 0;
+    for(int i = 1; i < nums.size(); ++ i)
+    {
+        int temp = pre2;
+        pre2 = cur2;
+        cur2 = max(temp + nums[i], pre2);
+    }
+
+    return max(cur1, cur2)
+    """
     def rob(self, nums):
         start_with_zero = 0
         start_with_one  = 0
