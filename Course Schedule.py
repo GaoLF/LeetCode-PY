@@ -9,6 +9,7 @@ class Solution:
     # DFS的方法采用两个标记，递归的时候设立一个visited，往下递归时，visted加入当前层的，在后面层序号在visted中
     # 则说明有环，如果一直往下遍历，每次都不在visted，则visted清空，查看下一个点为开始，不断往前找
     # 注：建立图的时候是，以每个点作为终点，把所有指向它的点加入到vec中
+
     def canFinish(self, numCourses, prerequisites):
         vec = [set() for i in xrange(numCourses)]
         for courses in prerequisites:
