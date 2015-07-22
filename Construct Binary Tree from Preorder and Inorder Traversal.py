@@ -10,19 +10,19 @@ class Solution:
     # @param {integer[]} inorder
     # @return {TreeNode}
     def buildTree(self, preorder, inorder):
-        return self.build(preorder,inorder,0,len(preorder)-1)
+        return self.build(preorder,inorder,0,len(preorder)-1,0,len(inorder))
 
-    def build(self,preorder,inorder,begin,end):
+    def build(self,preorder,inorder,pb,pe,ib,ie):
         #size = len(inorder)
-        if begin > end:
+        if pb > pe:
             return None
         #if size == 1:
         #    return TreeNode(preorder[0])
-        for i in range(begin,end+1):
-            if inorder[i] == preorder[begin]:
-                head = TreeNode(inorder[i])
-                head.left = self.buildTree(preorder,inorder[begin:i])
-                head.right = self.buildTree(preorder[i+1:end+1],inorder[i+1:end+1])
+        for i in range(0,ie-ib+1):
+            if inorder[i+ib] == preorder[pb]:
+                head = TreeNode(inorder[i+ib])
+                head.left = self.build(preorder,inorder,pb+1,pb+i,ib,ib+i-1)
+                head.right = self.build(preorder,inorder,pb+i+1,pe,ib+i+1,ie)
                 return head
 
 
@@ -37,4 +37,4 @@ def p(a):
         if a.right:
             p(a.right)
 #p(a)
-p(b)
+p(a)
